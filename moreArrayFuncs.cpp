@@ -128,7 +128,6 @@ void multiplyPairwise(int *a, int *b, int *product, int n) {
   for (int i = 0; i < n; i++){
     product[i] = a[i] * b[i];
   }
-  // STUB; fix this
 }
 
 // len is the number of elements the array you create should contain
