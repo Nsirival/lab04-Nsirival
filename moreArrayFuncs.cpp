@@ -106,7 +106,7 @@ int copyOddOnly(int *dest, int *src, int n) {
   int count = 0;
   int index = 0;
   for(int i = 0; i < n; i++){
-    if(src[i] %2 == 1){
+    if(src[i] %2 == 1 || src[i] % 2 == -1){
       dest[index] = src[i];
       count ++;
       index ++;
