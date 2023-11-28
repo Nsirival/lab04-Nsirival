@@ -12,7 +12,7 @@ int indexOfMax(int *a, int size) {
   assert(size >= 1);
   int index = 0;
   for(int i = 0; i < size; i ++){
-    if (a[i] > index){
+    if (a[i] > a[index]){
       index = i;
     }
   } // STUB !!! Remove and replace with correct code
@@ -65,7 +65,7 @@ int smallestValue(int *a, int size) {
       min = a[i];
     }
   }
-  return -42; // STUB !!! Remove and replace with correct code
+  return min; // STUB !!! Remove and replace with correct code
 }
 
 
@@ -104,10 +104,12 @@ void copyElements(int *dest, int *src, int n) {
 
 int copyOddOnly(int *dest, int *src, int n) {
   int count = 0;
+  int index = 0;
   for(int i = 0; i < n; i++){
     if(src[i] %2 == 1){
-      dest[i] = src[i];
+      dest[index] = src[i];
       count ++;
+      index ++;
     }
   }
   return count;
